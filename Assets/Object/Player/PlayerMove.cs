@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     Rigidbody rBody; // リジッドボディを使うための宣言
     Vector3 velo = Vector3.zero;
-    float speed=8;
+    float speed=15;
 
     //上0 左1 下2 右3
     // public IReadOnlyReactiveProperty<PlayerLookDirection> Direction => _dire;
