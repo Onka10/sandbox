@@ -8,6 +8,8 @@ public class PlayerMove : MonoBehaviour
     Vector3 velo = Vector3.zero;
     float speed=15;
 
+    public PlayerAnimation _anime;
+
     //上0 左1 下2 右3
     // public IReadOnlyReactiveProperty<PlayerLookDirection> Direction => _dire;
     // private readonly ReactiveProperty<PlayerLookDirection> _dire = new ReactiveProperty<PlayerLookDirection>();
@@ -31,12 +33,14 @@ public class PlayerMove : MonoBehaviour
             velo = new Vector3(move.x * speed, 0,0);
             // if (move.x > 0)    _dire.Value = PlayerLookDirection.Right;
             // else                _dire.Value = PlayerLookDirection.Left;
+            _anime.Run();
         }
         else if (move.z != 0)
         {
             velo = new Vector3(0,0, move.z * speed);
             // if (move.y > 0)    _dire.Value = PlayerLookDirection.Top;
             // else                _dire.Value = PlayerLookDirection.Bottom;
+            _anime.Run();
         }
         else
         {
